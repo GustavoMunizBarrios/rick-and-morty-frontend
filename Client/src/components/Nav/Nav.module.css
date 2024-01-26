@@ -1,0 +1,242 @@
+.nav{
+    background-color: #262c3a;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-items: center;
+    align-items: center;
+    /* grid-template-rows: repeat(3, 1fr); */
+    grid-auto-rows: minmax(95px, auto);
+    grid-template-areas: 
+    "home about favorites ....... logout"
+    "....... ...... logo ...... ......."
+    "....... search search search .......";
+    grid-row-gap: 1px; /* Espacio entre filas */
+    position: relative; 
+}
+.nav::after {
+    content: "";
+    position: absolute;
+    bottom: calc(100% + 1px); /* Posiciona el pseudo-elemento debajo de la primera fila */
+    left: -135%;
+    width: 360%;
+    height: 1px; /* Altura de la línea */
+    background-color: #596787; /* Color de la línea */
+    grid-area: logo; /* Asegura que el pseudo-elemento esté en la misma área que el elemento "logo" */
+  }
+.nav a {
+    color: inherit;
+    text-decoration: none;
+}
+/* ****************************************************** */
+ /**************** ESTILOS COMUNES DE BOTONES *********************/
+/* ****************************************************** */
+.btnComun {
+    width: 8em;
+    position: relative;
+    height: 2.6em;
+    border: 3px solid #1e8f89;
+    outline: none;
+    background-color: transparent;
+    color: #dddddd;
+    transition: 1s;
+    border-radius: 0.3em;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    display: block;
+}
+.btnComun::before {
+    content: "";
+    position: absolute;
+    top: 90%;
+    left: 6%;
+    width: 88%;
+    height: 40%;
+    background-color: #262c3a;
+    transition: 0.5s;
+    transform-origin: center;
+}
+.btnComun::after{
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 6%;
+    width: 88%;
+    height: 40%;
+    background-color: #262c3a;
+    transition: 0.5s;
+    transform-origin: center;
+}
+.btnComun:hover::after {
+    transform: scale(0);
+}
+.btnComun:hover::before {
+    transform: scale(0);
+}
+/* ****************************************************** */
+ /**************** ESTILOS PARTICULARES DE BOTONES *********************/
+/* ****************************************************** */
+.nav .home {
+    grid-area: home;
+}
+.nav .about {
+    grid-area: about;
+}
+.nav .favorites {
+    grid-area: favorites;
+}
+.nav .logout {
+    grid-area: logout;
+}
+/* ****************************************************** */
+ /**************** ESTILOS IMAGEN *********************/
+/* ****************************************************** */
+
+.nav .imgLogo {
+    width: 500px;
+    grid-area: logo;
+    margin-top: 50px;
+}
+.nav .searchBar {
+    grid-area: search;
+}
+/* ****************************************************** */
+ /**************** Hamburguer menu styles *********************/
+/* ****************************************************** */
+.hamburgerMenu {
+    display: none;
+    cursor: pointer;
+  }
+  
+  /* Hide regular buttons when the hamburger menu is open */
+  .hide {
+    display: none !important;
+  }
+  /* ********************************************************************************** */
+/* ********************* MENU ICON ****************************** */
+/* ********************************************************************************** */
+.menuIcon {
+    display: none;
+    width: 50px;
+    height: 50px;
+    color: #f5f5f5;
+}
+.hamburgerMenu {
+   /* display: block; */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    position: relative; /* Añadir posición relativa */
+    z-index: 30; /* Asegurar que el botón esté en el primer plano */
+    margin-left: 50px;
+}
+
+.menuOverlay {
+    position: absolute;
+    top: 20%;
+    left: 0%;
+/*     width: 100vw;
+    height: 100vh; */
+   /*  background-color: rgba(0, 0, 0, 0.5); */ /* Fondo de superposición semi-transparente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 30;
+
+    padding: 0px 10px 10px 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #1a1a1a;
+    color: #1a1a1a;
+    cursor: pointer;
+}
+.menuItems {
+    background-color: #1a1a1a;
+    width: 200px;
+    padding: 10px;
+    border-radius: 5px;
+}
+/* .menuItems a {
+    text-decoration: none;
+    color: black;
+    display: block;
+    margin-bottom: 10px;
+}
+.menuItems a:hover {
+    color: #FE654F
+} */
+.btn_hamburguerMenu {
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
+/* ****************************************************** */
+ /**************** Media Queries *********************/
+/* ****************************************************** */
+
+@media  screen and (max-width: 1500px) {
+    .nav::after {
+        left: -90%;
+        width: 278%;
+      }
+}
+@media  screen and (max-width: 1260px) {
+    .nav::after {
+        left: -70%;
+        width: 240%;
+      }
+}
+@media screen and (max-width: 1100px) {
+    .btnComun {
+        display: none;
+    }
+    .nav::after {
+        display: none;
+    }
+    .menuIcon {
+        display: block;
+    }
+    .hamburgerMenu {
+        display: block;
+        margin-left: 70px;
+    }
+}
+@media screen and (max-width: 700px) {
+    .hamburgerMenu {
+        margin-left: 6px;
+        grid-row: 1;
+        grid-column: 1;
+        margin-top: 15px;
+        justify-self: start; /* Alineación a la izquierda */
+    }
+    .nav .imgLogo {
+        width: 450px;
+        grid-row: 2;
+        grid-column: 1;
+        text-align: center;
+    }
+    .nav {
+        display: grid;
+        grid-template-columns: 1fr; /* Una columna */
+        grid-template-rows: auto auto auto; /* Tres filas */
+    }
+    .nav .searchBar {
+        grid-row: 3;
+        grid-column: 1;
+        text-align: center;
+        padding: 10px;
+    }
+}
+@media screen and (max-width: 425px) {
+    .nav .imgLogo {
+        margin-top: 24px;
+        width: 360PX;
+    }
+    .menuIcon {
+        width: 40px;
+    }
+}
+
+

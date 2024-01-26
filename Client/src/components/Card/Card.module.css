@@ -1,0 +1,228 @@
+.card {
+    /* margin-left: 3.125rem;*/
+    margin-bottom: 3.125rem; 
+    width: 230px;
+    height: 350px;
+    background-image: linear-gradient(163deg, #00ff75 0%, #3700ff 100%);
+    border-radius: 20px;
+    transition: all .3s;
+}
+.card:hover {
+    box-shadow: 0px 0px 30px 1px rgba(0, 255, 117, 0.30);
+}
+   
+.card2 {
+    width: 230px;
+    height: 350px;
+    background-color: #1a1a1a;
+    /* border-radius: 20px; */
+    transition: all .2s;
+    position: relative;
+}
+.card2 .img {
+    width: 90%;
+    margin-top: 0.625rem;
+    margin-bottom: 8px;
+    border-radius: 10px;
+}
+   
+.card2:hover {
+    transform: scale(0.98) ;
+    border-radius: 20px;
+}
+/* ****************************************************** */
+ /**************** BOTÓN DE ELIMINAR CARD *****************/
+/* ****************************************************** */
+
+ .card2:hover .btnX {
+    display: block;
+    position: absolute;
+    top: 0.625rem;
+    right: 0.625rem;
+    z-index: 5;
+
+    width: 75px; /* Reducción del 50% */
+    height: 25px; /* Reducción del 50% */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    background: red;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
+    background: #e62222;
+    padding: 0;
+}
+.card2 .btnX {
+    display: none;
+    position: absolute;
+    top: 0.625rem;
+    right: 0.625rem;
+    z-index: 5;
+}
+.card2 .btnX,
+.btnX span {
+    transition: 200ms;
+}
+.card2 .btnX .btnX_text {
+    transform: translateX(13px); /* Reducción del 50% */
+    color: white;
+    font-weight: bold;
+    font-size: 9px;
+}
+.card2 .btnX .btnX_icon {
+    position: absolute;
+    border-left: 1px solid #c41b1b;
+    transform: translateX(55px); /* Reducción del 50% */
+    height: 20px; /* Reducción del 50% */
+    width: 20px; /* Reducción del 50% */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card2 .btnX svg {
+    width: 7.5px; /* Reducción del 50% */
+    fill: #eee;
+}
+.card2 .btnX:hover {
+    background: #ff3636;
+}
+.card2 .btnX:hover .btnX_text {
+    color: transparent;
+}
+.card2 .btnX:hover .btnX_icon {
+    width: 75px; /* Reducción del 50% */
+    border-left: none;
+    transform: translateX(0);
+}
+.card2 .btnX:focus {
+    outline: none;
+}
+.card2 .btnX:active .btnX_icon svg {
+    transform: scale(0.8);
+}
+
+/* ****************************************************** */
+ /**************** BOTÓN DE FAVORITOS *********************/
+/* ****************************************************** */
+.card2 .btnFav_main {
+    height: 0px;
+    width: 0px;
+    border: 0;
+    padding: 0;
+}
+
+.card2 .btnFav {
+    position: absolute;
+    top: 295px;
+    right: 40px;
+    
+    width: 150px; 
+    height: 35px; 
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border: 1px solid #3aa856; 
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
+    background: #1a1a1a;
+    padding: 0;
+} 
+.card2 .btnFav_select {
+    background: #3aa856;
+
+}
+.card2 .btnFav,
+.btnFav span {
+    transition: 200ms;
+}
+.card2 .btnFav .btnFav_text {
+    transform: translateX(32px); 
+    color: white;
+    font-weight: bold;
+    font-size: 11px;
+}
+.card2 .btnFav .btnFav_icon {
+    position: absolute;
+    border-left: 1px solid #338d48fb;
+    transform: translateX(110px); 
+    height: 25px; 
+    width: 40px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card2 .btnFav svg {
+    width: 24px; 
+    fill: #eee;
+}
+.card2 .btnFav:hover {
+    background: #3aa856;
+}
+.card2 .btnFav:hover .btnFav_text {
+    color: transparent;
+}
+.card2 .btnFav:hover .btnFav_icon {
+    width: 150px; 
+    border-left: none;
+    transform: translateX(0);
+}
+.card2 .btnFav:focus {
+    outline: none;
+}
+.card2 .btnFav:active .btnFav_icon svg {
+    transform: scale(0.8);
+}
+.card2 .btnFav_tick {
+    padding-left: 42%;
+}
+/* ****************************************************** */
+ /**************** BOTÓN DE PERSONAJE *********************/
+/* ****************************************************** */
+
+.card2 .btnName {
+    width: 10em;
+    position: relative;
+    height: 3.5em;
+    border: 3px ridge #149CEA;
+    outline: none;
+    background-color: transparent;
+    color: white;
+    transition: 1s;
+    border-radius: 0.3em;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.card2 .btnName::before {
+    content: "";
+    position: absolute;
+    top: 80%;
+    left: 3%;
+    width: 95%;
+    height: 30%;
+    background-color: #1a1a1a;
+    transition: 0.5s;
+    transform-origin: center;
+}
+.card2 .btnName::after{
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 3%;
+    width: 95%;
+    height: 30%;
+    background-color: #1a1a1a;
+    transition: 0.5s;
+    transform-origin: center;
+}
+
+.btnName:hover::after{
+    transform: scale(0);
+}
+.btnName:hover::before{
+    transform: scale(0);
+} 
+.card2 .btnName:hover {
+    box-shadow: inset 0px 0px 25px #1479EA;
+}
