@@ -14,4 +14,4 @@ Type a number and discover the character, you can display as many as you want.
 
 Click on a character to get more information, you can also select your favorite characters and save them to your library.
 
-![Screenshot](./src/images/rickandmorty-favoritos.jpeg)
+![Screenshot](./src/images/rickandmorty-favoritos.jpg)
