@@ -6,12 +6,12 @@
 
 This application contains an extensive library of iconic characters from the Rick and Morty series.
 
-[!Screenshot](./src/images/rickandmorty-menu.jpeg)
+![Screenshot](./src/images/rickandmorty-menu.jpeg)
 
 Type a number and discover the character, you can display as many as you want.
 
-[!Screenshot](./src/images/rickandmorty-principal.jpeg)
+![Screenshot](./src/images/rickandmorty-principal.jpeg)
 
 Click on a character to get more information, you can also select your favorite characters and save them to your library.
 
-[!Screenshot](./src/images/rickandmorty-favoritos.jpeg)
+![Screenshot](./src/images/rickandmorty-favoritos.jpeg)
