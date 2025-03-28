@@ -192,6 +192,34 @@
 }
 
 /* ****************************************************** */
+/**************** DEMO CREDENTIALS ***********************/
+/* ****************************************************** */
+.demoCredentials {
+    margin-top: 8px;
+    padding: 10px;
+    background-color: #262c3a;
+    border: 1px solid #1e8f89;
+    border-radius: 5px;
+    color: #c2dd9c;
+    font-size: 0.8rem;
+    text-align: center;
+    width: 80%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    line-height: 1.4;
+}
+
+.demoCredentials p:first-child {
+    color: #1e8f89;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.demoCredentials p {
+    margin: 3px 0;
+}
+
+
+/* ****************************************************** */
  /**************** IMAGEN PORTAL  *********************/
 /* ****************************************************** */
 .login .img {
