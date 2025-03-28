@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.3f4f7538.css",
-    "main.js": "/static/js/main.bf5ed364.js",
+    "main.css": "/static/css/main.f98aebe7.css",
+    "main.js": "/static/js/main.9be418af.js",
     "static/media/Logo_rickandmorty2.png": "/static/media/Logo_rickandmorty2.be71e089cfcaa0805791.png",
     "static/media/portal_download-removebg.png": "/static/media/portal_download-removebg.d39d5943f80567975962.png",
     "static/media/rick_sin_fondo.png": "/static/media/rick_sin_fondo.35aadcf005f1041c3545.png",
     "static/media/morty2.png": "/static/media/morty2.427d6265389abe0685e7.png",
     "index.html": "/index.html",
     "static/media/menu-svg.svg": "/static/media/menu-svg.1bbbe415b456f261fcd371c672a62227.svg",
-    "main.3f4f7538.css.map": "/static/css/main.3f4f7538.css.map",
-    "main.bf5ed364.js.map": "/static/js/main.bf5ed364.js.map"
+    "main.f98aebe7.css.map": "/static/css/main.f98aebe7.css.map",
+    "main.9be418af.js.map": "/static/js/main.9be418af.js.map"
   },
   "entrypoints": [
-    "static/css/main.3f4f7538.css",
-    "static/js/main.bf5ed364.js"
+    "static/css/main.f98aebe7.css",
+    "static/js/main.9be418af.js"
   ]
 }
